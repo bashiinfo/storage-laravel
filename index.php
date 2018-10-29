@@ -1,7 +1,7 @@
 <?php
 require_once './vendor/autoload.php';
 use Bashi\CloudStorage;
-$storage = new CloudStorage('http://upfiledev.h5more.com', 'education_abc', 'testAppKey');
+$storage = new CloudStorage('http://xxx.com', 'test', 'test');
 
 $options = [
     'file_name'=>'1_4.png',
@@ -10,7 +10,6 @@ $options = [
 ];
 
 $rel = $storage->upload(fopen('./1_4.png', 'r'),$options);
-print_r($rel);
 // Array
 // (
 //     [code] => 0

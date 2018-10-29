@@ -8,7 +8,7 @@ class Sign
 
     public static function genereate($appKey, $options)
     {
-        $options['time'] = $options['time'] + self::$expireSeconds;
+        $options['time'] = $options['time'];
         ksort($options);
         $options = array_map(function ($v) use ($options) {
             return $v . '=' . $options[$v];

@@ -25,9 +25,9 @@ class CloudStorage{
         ];
         // 生成签名
         $options['time']=time();
+        $options['appId'] = $this->appId;
         $sign = Sign::genereate($this->appKey, $options);
         $options['sign'] = $sign;
-        $options['appId'] = $this->appId;
         $mul = [];
         foreach ($options as $k=>$option){
             $mul[]=[
